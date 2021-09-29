@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./Itemcard.css";
+import Popup from "../popup/popup";
 
 const Itemcard = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,21 +25,7 @@ const Itemcard = () => {
         </div>
         <hr />
       </div>
-      {isOpen && (
-        <div className="modalContainer">
-          <div className="popupModal">
-            <div className="modalHead">
-              <div>
-                <div>Customize “BFF Veg Sub Combo (15 cm, 6 Inch)”</div>
-                <div>Rs 371</div>
-              </div>
-              <div className="modalClose" onClick={openModal}>
-                X
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
+      {isOpen && <Popup closeModal={openModal} />}
     </>
   );
 };

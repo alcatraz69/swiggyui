@@ -1,0 +1,74 @@
+.itemCardContainer {
+  width: 30%;
+  margin: auto;
+  overflow: hidden;
+}
+.itemCard {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+}
+
+.itemDetails {
+  text-align: left;
+}
+
+.offerText {
+  font-size: 12px;
+  color: rgb(39, 187, 9);
+}
+
+.addBtn {
+  border: 1px solid black;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.modalContainer {
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.popupModal {
+  position: relative;
+  top: -20px;
+  width: 600px;
+  height: 80vh;
+  background-color: rgb(255, 255, 255);
+  margin: auto;
+  animation: animatetop 0.3s forwards;
+  box-shadow: 0 2px 20px 0 rgb(40 44 63 / 15%);
+}
+
+.modalHead {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 20px;
+  padding: 20px 0;
+  border-bottom: 1px dashed #bebfc5;
+}
+
+.modalClose {
+  color: #b6b7bb;
+  cursor: pointer;
+}
+
+@keyframes animatetop {
+  from {
+    top: 200px;
+    opacity: 0;
+  }
+  to {
+    top: -20px;
+    opacity: 1;
+  }
+}

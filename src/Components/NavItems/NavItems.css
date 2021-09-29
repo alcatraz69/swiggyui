@@ -1,0 +1,42 @@
+.navContainer {
+  padding: 15px 35px;
+  box-shadow: 0 2px 4px 0 rgb(40 44 63 / 10%);
+}
+.navContainer .navBarItem {
+  text-decoration: none;
+  color: #93959f;
+  font-size: 12px;
+  padding-bottom: 7px;
+  display: inline-block;
+}
+
+.navItems {
+  padding: 0 28px;
+  margin-top: 5px;
+  height: 340px;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  box-shadow: 0 2px 4px 0 rgb(40 44 63 / 10%);
+}
+
+.navBarItem:not(:last-child):after {
+  content: "•";
+  color: #979797;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.choiceHeading {
+  margin-left: 6px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.options {
+  display: flex;
+  padding: 10px 0;
+}
+
+.inputRadio {
+  margin-right: 12px;
+}

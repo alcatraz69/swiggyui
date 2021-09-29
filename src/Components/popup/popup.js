@@ -1,3 +1,4 @@
+import NavItems from "../NavItems/NavItems";
 import "./popup.css";
 
 const popup = ({ closeModal }) => {
@@ -6,13 +7,16 @@ const popup = ({ closeModal }) => {
       <div className="modalContainer">
         <div className="popupModal">
           <div className="modalHead">
-            <div>
+            <div className="headItem">
               <div>Customize “BFF Veg Sub Combo (15 cm, 6 Inch)”</div>
               <div>Rs 371</div>
             </div>
             <div className="modalClose" onClick={closeModal}>
               X
             </div>
+          </div>
+          <div className="modalNav">
+            <NavItems />
           </div>
         </div>
       </div>

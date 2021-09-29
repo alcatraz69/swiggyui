@@ -27,7 +27,9 @@
   padding: 20px 0;
   border-bottom: 1px dashed #bebfc5;
 }
-
+.headItem {
+  margin-left: 16px;
+}
 .modalClose {
   color: #b6b7bb;
   cursor: pointer;

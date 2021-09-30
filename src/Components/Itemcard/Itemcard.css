@@ -26,3 +26,14 @@
   font-size: 14px;
   cursor: pointer;
 }
+
+@media screen and (max-width: 950px) {
+  .itemCardContainer {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .itemCardContainer {
+    width: 80%;
+  }
+}

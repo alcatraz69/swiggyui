@@ -106,7 +106,11 @@ const NavItems = () => {
           );
         })}
       </div>
-      {error && <div className="errorText">Max 3 sauses allowed</div>}
+      {error && (
+        <div className="errorText">
+          You can select a maximum of 3 Sauces Any (3).
+        </div>
+      )}
       <div className="modalBottom">
         <p className="subSelected">
           {userInput.choice1}, {userInput.choice2}

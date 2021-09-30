@@ -4,6 +4,7 @@ import { Choices } from "./Choice";
 
 const NavItems = () => {
   const [route, routeSetter] = useState("choice1");
+  const [error, setError] = useState(false);
   const [userInput, setUserInput] = useState({
     choice1: "",
     choice2: "",
@@ -19,20 +20,33 @@ const NavItems = () => {
     const { name, value } = e.target;
     setUserInput({ ...userInput, [name]: value });
   };
+
   const handleCheckbox = (e) => {
     const { name, value } = e.target;
     const isPresent = userInput[name].find((item) => item === value);
+    let keys = Object.keys(userInput);
     if (isPresent) {
       setUserInput({
         ...userInput,
         [name]: userInput[name].filter((item) => item !== value),
       });
     } else {
-      setUserInput({ ...userInput, [name]: [...userInput[name], value] });
+      if (name === keys[6]) {
+        if (userInput.choice7.length >= 3) {
+          setError(true);
+        } else {
+          setUserInput({ ...userInput, [name]: [...userInput[name], value] });
+        }
+      } else {
+        setUserInput({ ...userInput, [name]: [...userInput[name], value] });
+      }
     }
   };
+
   function handleAdd() {
-    console.log(userInput);
+    alert(
+      `Hello! Your Sub with ${userInput.choice1}, ${userInput.choice2}, ${userInput.choice3}, ${userInput.choice4}, ${userInput.choice5}, ${userInput.choice6}, ${userInput.choice7}, ${userInput.choice8} is getting ready! :)`
+    );
   }
 
   return (
@@ -45,6 +59,7 @@ const NavItems = () => {
               href={"#" + item.choiceNo}
               style={{
                 color: `${route === item.choiceNo ? "#000" : "#93959f"}`,
+                fontWeight: `${route === item.choiceNo ? "500" : "400"}`,
               }}
               onClick={() => {
                 routeSetter(item.choiceNo);
@@ -86,10 +101,13 @@ const NavItems = () => {
           );
         })}
       </div>
+      {error && <div className="errorText">Max 3 sauses allowed</div>}
       <div className="modalBottom">
         <div className="totalItem">
           <span>Total: Rs.371/-</span>
-          <span onClick={handleAdd}>ADD ITEM</span>
+          <span onClick={handleAdd} className="addItemBtn">
+            ADD ITEM
+          </span>
         </div>
       </div>
     </>

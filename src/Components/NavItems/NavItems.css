@@ -31,6 +31,7 @@
   margin-left: 6px;
   font-size: 16px;
   font-weight: 600;
+  letter-spacing: 1px;
 }
 
 .options {
@@ -52,4 +53,37 @@
   background-color: #60b246;
   color: white;
   padding: 14px;
+}
+.addItemBtn {
+  cursor: pointer;
+}
+
+.errorText {
+  background-color: #fa4a5b;
+  color: #fff;
+  padding: 15px 30px;
+  font-weight: 300;
+  position: absolute;
+  bottom: 86px;
+  width: -webkit-fill-available;
+  animation: animateError 4s forwards;
+}
+
+@keyframes animateError {
+  0% {
+    bottom: 40px;
+    opacity: 0;
+  }
+  10% {
+    bottom: 86px;
+    opacity: 1;
+  }
+  90% {
+    bottom: 86px;
+    opacity: 1;
+  }
+  100% {
+    bottom: 86px;
+    opacity: 0;
+  }
 }

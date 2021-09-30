@@ -3,11 +3,38 @@ import "./NavItems.css";
 import { Choices } from "./Choice";
 
 const NavItems = () => {
-  const [route, routeSetter] = useState(1);
+  const [route, routeSetter] = useState("choice1");
+  const [userInput, setUserInput] = useState({
+    choice1: "",
+    choice2: "",
+    choice3: "",
+    choice4: "",
+    choice5: "",
+    choice6: "",
+    choice7: [],
+    choice8: [],
+  });
 
-  const handleChange = (e) => {
-    console.log(e.target);
+  const handleRadio = (e) => {
+    const { name, value } = e.target;
+    setUserInput({ ...userInput, [name]: value });
   };
+  const handleCheckbox = (e) => {
+    const { name, value } = e.target;
+    const isPresent = userInput[name].find((item) => item === value);
+    if (isPresent) {
+      setUserInput({
+        ...userInput,
+        [name]: userInput[name].filter((item) => item !== value),
+      });
+    } else {
+      setUserInput({ ...userInput, [name]: [...userInput[name], value] });
+    }
+  };
+  function handleAdd() {
+    console.log(userInput);
+  }
+
   return (
     <>
       <div className="navContainer">
@@ -18,13 +45,11 @@ const NavItems = () => {
               href={"#" + item.choiceNo}
               style={{
                 color: `${route === item.choiceNo ? "#000" : "#93959f"}`,
-                textDecoration: `${
-                  route === item.choiceNo ? "underline" : "none"
-                }`,
               }}
               onClick={() => {
                 routeSetter(item.choiceNo);
               }}
+              key={item.choiceNo}
             >
               {item.choice}
             </a>
@@ -34,17 +59,22 @@ const NavItems = () => {
       <div className="navItems">
         {Choices.map((item) => {
           return (
-            <div id={item.choiceNo}>
+            <div id={item.choiceNo} key={item.choiceNo}>
               <p className="choiceHeading">{item.choice}</p>
 
               {item.options.map((option) => {
                 return (
-                  <div className="options">
+                  <div className="options" key={option}>
                     <input
                       type={item.optionsType === "Radio" ? "Radio" : "Checkbox"}
                       className="inputRadio"
                       name={item.choiceNo}
-                      onClick={handleChange}
+                      onChange={
+                        item.optionsType === "Radio"
+                          ? handleRadio
+                          : handleCheckbox
+                      }
+                      value={option}
                     />
                     <label className="itemLabel" htmlFor="choice1">
                       {option}
@@ -55,6 +85,12 @@ const NavItems = () => {
             </div>
           );
         })}
+      </div>
+      <div className="modalBottom">
+        <div className="totalItem">
+          <span>Total: Rs.371/-</span>
+          <span onClick={handleAdd}>ADD ITEM</span>
+        </div>
       </div>
     </>
   );

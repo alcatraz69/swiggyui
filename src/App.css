@@ -3,7 +3,7 @@ body {
   overflow: hidden;
 }
 
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   width: 0;
   background: transparent;
-}
+} */

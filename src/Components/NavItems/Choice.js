@@ -1,18 +1,18 @@
 export const Choices = [
   {
-    choiceNo: 1,
+    choiceNo: "choice1",
     choice: "Choice of 1st Sub",
     options: ["Chicken Kofta", "Chicken Slice", "Roasted Chicken Stripes"],
     optionsType: "Radio",
   },
   {
-    choiceNo: 2,
+    choiceNo: "choice2",
     choice: "Choice of 2nd Sub",
     options: ["Chicken Kofta", "Chicken Slice", "Roasted Chicken Stripes"],
     optionsType: "Radio",
   },
   {
-    choiceNo: 3,
+    choiceNo: "choice3",
     choice: "Choice of Bread",
     options: [
       "Multigrain Bread",
@@ -24,7 +24,7 @@ export const Choices = [
     optionsType: "Radio",
   },
   {
-    choiceNo: 4,
+    choiceNo: "choice4",
     choice: "Choice of Preparation",
     options: [
       "Plain Bread",
@@ -34,7 +34,7 @@ export const Choices = [
     optionsType: "Radio",
   },
   {
-    choiceNo: 5,
+    choiceNo: "choice5",
     choice: "Choice of 1st Free Cookie",
     options: [
       "Double Dark Chunk Chocolate Cookie",
@@ -44,7 +44,7 @@ export const Choices = [
     optionsType: "Radio",
   },
   {
-    choiceNo: 6,
+    choiceNo: "choice6",
     choice: "Choice of 2nd Free Cookie",
     options: [
       "Double Dark Chunk Chocolate Cookie",
@@ -54,7 +54,7 @@ export const Choices = [
     optionsType: "Radio",
   },
   {
-    choiceNo: 7,
+    choiceNo: "choice7",
     choice: "Choice of Sauce Any (3)",
     options: [
       "Mayonnaise",
@@ -67,7 +67,7 @@ export const Choices = [
     optionsType: "Checkbox",
   },
   {
-    choiceNo: 8,
+    choiceNo: "choice8",
     choice: "Choice of Vegetables",
     options: [
       "Lettuce",

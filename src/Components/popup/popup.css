@@ -12,8 +12,7 @@
 .popupModal {
   position: relative;
   top: -20px;
-  width: 600px;
-  height: 80vh;
+  width: 60%;
   background-color: rgb(255, 255, 255);
   margin: auto;
   animation: animatetop 0.3s forwards;

@@ -2,6 +2,7 @@
   padding: 15px 35px;
   box-shadow: 0 2px 4px 0 rgb(40 44 63 / 10%);
 }
+
 .navContainer .navBarItem {
   text-decoration: none;
   color: #93959f;
@@ -12,7 +13,7 @@
 
 .navItems {
   padding: 0 28px;
-  margin-top: 5px;
+  padding-top: 5px;
   height: 340px;
   overflow-y: scroll;
   scroll-behavior: smooth;
@@ -39,4 +40,16 @@
 
 .inputRadio {
   margin-right: 12px;
+}
+
+.modalBottom {
+  padding: 20px;
+}
+.totalItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #60b246;
+  color: white;
+  padding: 14px;
 }

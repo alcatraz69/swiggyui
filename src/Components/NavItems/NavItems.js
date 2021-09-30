@@ -6,8 +6,8 @@ const NavItems = () => {
   const [route, routeSetter] = useState("choice1");
   const [error, setError] = useState(false);
   const [userInput, setUserInput] = useState({
-    choice1: "",
-    choice2: "",
+    choice1: "Mexican Patty",
+    choice2: "Chatpata Chana",
     choice3: "",
     choice4: "",
     choice5: "",
@@ -45,7 +45,7 @@ const NavItems = () => {
 
   function handleAdd() {
     alert(
-      `Hello! Your Sub with ${userInput.choice1}, ${userInput.choice2}, ${userInput.choice3}, ${userInput.choice4}, ${userInput.choice5}, ${userInput.choice6}, ${userInput.choice7}, ${userInput.choice8} is getting ready! :)`
+      `Hello!\nYour Sub with ${userInput.choice1} ${userInput.choice2} ${userInput.choice3} ${userInput.choice4} ${userInput.choice5} ${userInput.choice6} ${userInput.choice7} ${userInput.choice8} is getting ready! :)`
     );
   }
 
@@ -90,6 +90,11 @@ const NavItems = () => {
                           : handleCheckbox
                       }
                       value={option}
+                      checked={
+                        item.optionsType === "Radio"
+                          ? userInput[item.choiceNo] === option
+                          : null
+                      }
                     />
                     <label className="itemLabel" htmlFor="choice1">
                       {option}
@@ -103,6 +108,9 @@ const NavItems = () => {
       </div>
       {error && <div className="errorText">Max 3 sauses allowed</div>}
       <div className="modalBottom">
+        <p className="subSelected">
+          {userInput.choice1}, {userInput.choice2}
+        </p>
         <div className="totalItem">
           <span>Total: Rs.371/-</span>
           <span onClick={handleAdd} className="addItemBtn">

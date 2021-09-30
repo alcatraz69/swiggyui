@@ -44,7 +44,7 @@
 }
 
 .modalBottom {
-  padding: 20px;
+  padding: 5px 22px 22px 22px;
 }
 .totalItem {
   display: flex;
@@ -67,6 +67,16 @@
   bottom: 86px;
   width: -webkit-fill-available;
   animation: animateError 4s forwards;
+}
+
+.subSelected {
+  font-size: 12px;
+  font-weight: 400;
+  margin: 0;
+  padding-bottom: 5px;
+  display: inline-block;
+  letter-spacing: 0.5px;
+  color: #93959f;
 }
 
 @keyframes animateError {

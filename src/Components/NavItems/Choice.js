@@ -2,13 +2,13 @@ export const Choices = [
   {
     choiceNo: "choice1",
     choice: "Choice of 1st Sub",
-    options: ["Chicken Kofta", "Chicken Slice", "Roasted Chicken Stripes"],
+    options: ["Mexican Patty", "Chatpata Chana"],
     optionsType: "Radio",
   },
   {
     choiceNo: "choice2",
     choice: "Choice of 2nd Sub",
-    options: ["Chicken Kofta", "Chicken Slice", "Roasted Chicken Stripes"],
+    options: ["Mexican Patty", "Chatpata Chana"],
     optionsType: "Radio",
   },
   {

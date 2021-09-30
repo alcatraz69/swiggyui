@@ -8,7 +8,9 @@ const popup = ({ closeModal }) => {
         <div className="popupModal">
           <div className="modalHead">
             <div className="headItem">
-              <div>Customize “BFF Veg Sub Combo (15 cm, 6 Inch)”</div>
+              <div className="heading">
+                Customize “BFF Veg Sub Combo (15 cm, 6 Inch)”
+              </div>
               <div>Rs 371</div>
             </div>
             <div className="modalClose" onClick={closeModal}>

@@ -29,6 +29,10 @@
 .headItem {
   margin-left: 16px;
 }
+.heading {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
 .modalClose {
   color: #b6b7bb;
   cursor: pointer;

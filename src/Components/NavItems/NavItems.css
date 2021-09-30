@@ -14,7 +14,7 @@
 .navItems {
   padding: 0 28px;
   padding-top: 5px;
-  height: 340px;
+  height: 314px;
   overflow-y: scroll;
   scroll-behavior: smooth;
   box-shadow: 0 2px 4px 0 rgb(40 44 63 / 10%);
@@ -64,7 +64,7 @@
   padding: 15px 30px;
   font-weight: 300;
   position: absolute;
-  bottom: 86px;
+  bottom: 92px;
   width: -webkit-fill-available;
   animation: animateError 4s forwards;
 }
@@ -85,15 +85,15 @@
     opacity: 0;
   }
   10% {
-    bottom: 86px;
+    bottom: 92px;
     opacity: 1;
   }
   90% {
-    bottom: 86px;
+    bottom: 92px;
     opacity: 1;
   }
   100% {
-    bottom: 86px;
+    bottom: 92px;
     opacity: 0;
   }
 }

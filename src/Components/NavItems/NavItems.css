@@ -79,7 +79,7 @@
   color: #93959f;
 }
 
-@keyframes animateError {
+/* @keyframes animateError {
   0% {
     bottom: 40px;
     opacity: 0;
@@ -96,4 +96,4 @@
     bottom: 92px;
     opacity: 0;
   }
-}
+} */

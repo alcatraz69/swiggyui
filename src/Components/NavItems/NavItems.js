@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./NavItems.css";
 import { Choices } from "./Choice";
 
@@ -15,6 +15,17 @@ const NavItems = () => {
     choice7: [],
     choice8: [],
   });
+
+  useEffect(() => {
+    if (error === true) {
+      debugger;
+      (function () {
+        setTimeout(() => {
+          setError(false);
+        }, 2000);
+      })();
+    }
+  }, [error]);
 
   const handleRadio = (e) => {
     const { name, value } = e.target;
@@ -33,7 +44,9 @@ const NavItems = () => {
     } else {
       if (name === keys[6]) {
         if (userInput.choice7.length >= 3) {
+          console.log(userInput.choice7);
           setError(true);
+          return;
         } else {
           setUserInput({ ...userInput, [name]: [...userInput[name], value] });
         }
@@ -106,11 +119,14 @@ const NavItems = () => {
           );
         })}
       </div>
-      {error && (
-        <div className="errorText">
-          You can select a maximum of 3 Sauces Any (3).
-        </div>
-      )}
+
+      <div
+        className="errorText"
+        style={{ display: error === true ? "block" : "none" }}
+      >
+        You can select a maximum of 3 Sauces Any (3).
+      </div>
+
       <div className="modalBottom">
         <p className="subSelected">
           {userInput.choice1}, {userInput.choice2}
